@@ -6,33 +6,29 @@ from tensorly.decomposition import tucker
 from math import ceil
 
 
-
-metadata = np.fromfile("tiny-yolo-voc.weights", count=4, dtype=np.int32) # first 4 entries are not weight parameters, they're metadata
+metadata = np.fromfile("tiny-yolo-voc.weights", count=4, dtype=np.int32)
 print "Metadata: ", metadata
 
+W = 10 #width
+H = 10 #height
+D = 10 #depth, number of featuremaps
+input_tensor = np.zeros((W,H,D)) #input_tensor with random numbers
+for w in xrange(W):
+	for h in xrange(H):
+		for d in xrange(D):
+			#temp = np.fromfile("tiny-yolo-voc.weights", dtype=np.int32, count=1) 	
+			input_tensor[w,h,d] = (w + h + d) % 100
+print "Input tensor shape: ", input_tensor.shape
+
+#rank of the Tucker decomposition
+tucker_rank = [100, 100, 2] # what rank you want to get after tucker
 
 
-#prints 10 first weights from 5th entry, they are weight parameters written in float32
-data = np.fromfile("tiny-yolo-voc.weights", dtype=np.int32, count=10) 
-print "Data: ", data
-
-
-
-
-
-
-#random data
-random_state = 12345
-image = tl.tensor(imresize(face(), 0.3), dtype='float64')
-#Rank of the Tucker decomposition
-tucker_rank = [100, 100, 2]
-
-
-#tucker decomposition with random data, we should change this to use our own weights
-core, tucker_factors = tucker(image, ranks=tucker_rank, init='random', tol=10e-5, random_state=random_state)
+#creates the core and factor matrices
+core, tucker_factors = tucker(input_tensor, ranks=tucker_rank)
 tucker_reconstruction = tl.tucker_to_tensor(core, tucker_factors)
 
-
-print "Core: ", core
-print "tucker_factors: ", tucker_factors 
+print "Core size: ", core.shape
+#print "Core: ", core
+#print "tucker_factors: ", tucker_factors 
 
