@@ -284,12 +284,13 @@ def convert(cfgfile, ptxtfile):
     gen.write(ptxtfile)
 
 def main():
-    parser = argparse.ArgumentParser(description='Convert YOLO cfg to Caffe prototxt')
-    parser.add_argument('cfg', type=str, help='YOLO cfg')
-    parser.add_argument('prototxt', type=str, help='Caffe prototxt')
-    args = parser.parse_args()
-
-    convert(args.cfg, args.prototxt)
+    #parser = argparse.ArgumentParser(description='Convert YOLO cfg to Caffe prototxt')
+    #parser.add_argument('cfg', type=str, help='YOLO cfg')
+    #parser.add_argument('prototxt', type=str, help='Caffe prototxt')
+    #args = parser.parse_args()
+    model_filename = '~/YOLOTucker/CaffeModel/tiniy-yolo-voc.prototext'
+    cfg_filename = '~/YOLOTucker/TinyYOLO/tiny-yolo-voc.cfg'
+    convert(cfg_filename, model_filename)
 
 if __name__ == "__main__":
     main()
