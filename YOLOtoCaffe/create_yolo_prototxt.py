@@ -289,7 +289,7 @@ def main():
     #parser.add_argument('prototxt', type=str, help='Caffe prototxt')
     #args = parser.parse_args()
     model_filename = 'tiniy-yolo-voc.prototext'
-    cfg_filename = '~/YOLOTucker/TinyYOLO/tiny-yolo-voc.cfg'
+    cfg_filename = 'tiny-yolo-voc.cfg'
     convert(cfg_filename, model_filename)
 
 if __name__ == "__main__":
