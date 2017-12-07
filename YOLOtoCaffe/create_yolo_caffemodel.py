@@ -10,25 +10,9 @@ import numpy as np
 import sys, getopt
 
 def main(argv):
-	model_filename = '~/darknet/cfg/tiny-yolo-voc.cfg'
+	model_filename = '~/caffe/....'
 	yoloweight_filename = '~/darknet/tiny-yolo-voc.weights'
 	caffemodel_filename = '~/caffe/tiniy-yolo-voc.caffemodel'
-	try:
-		opts, args = getopt.getopt(argv, "hm:w:o:")
-		print opts
-	except getopt.GetoptError:
-		print 'create_yolo_caffemodel.py -m <model_file> -w <yoloweight_filename> -o <caffemodel_output>'
-		sys.exit(2)
-	for opt, arg in opts:
-		if opt == '-h':
-			print 'create_yolo_caffemodel.py -m <model_file> -w <yoloweight_filename> -o <caffemodel_output>'
-			sys.exit()
-		elif opt == "-m":
-			model_filename = arg
-		elif opt == "-w":
-			yoloweight_filename = arg
-		elif opt == "-o":
-			caffemodel_filename = arg
 			
 	print 'model file is ', model_filename
 	print 'weight file is ', yoloweight_filename
