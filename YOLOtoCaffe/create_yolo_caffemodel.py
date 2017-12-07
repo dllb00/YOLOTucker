@@ -10,9 +10,9 @@ import numpy as np
 import sys, getopt
 
 def main(argv):
-	model_filename = ''
-	yoloweight_filename = ''
-	caffemodel_filename = ''
+	model_filename = '/root/darknet/cfg/tiny-yolo-voc.cfg'
+	yoloweight_filename = '/root/darknet/tiny-yolo-voc.weights'
+	caffemodel_filename = '/root/caffe/tiniy-yolo-voc.caffemodel'
 	try:
 		opts, args = getopt.getopt(argv, "hm:w:o:")
 		print opts
@@ -37,7 +37,7 @@ def main(argv):
 	params = net.params.keys()
 
 	# read weights from file and assign to the network
-	netWeightsInt = np.fromfile(yoloweight_filename, dtype=np.int32)
+	netWeightsInt = np.fromfile(/root/darknet/tiny-yolo-voc.weights, dtype=np.int32)
 	transFlag = (netWeightsInt[0]>1000 or netWeightsInt[1]>1000) # transpose flag, the first 4 entries are major, minor, revision and net.seen
 	print transFlag
 
