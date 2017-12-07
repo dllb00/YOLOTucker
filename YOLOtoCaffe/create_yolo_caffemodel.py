@@ -10,9 +10,9 @@ import numpy as np
 import sys, getopt
 
 def main(argv):
-	model_filename = '~/caffe/....'
+	model_filename = '~/YOLOTucker/CaffeModel/tiniy-yolo-voc.prototext'
 	yoloweight_filename = '~/darknet/tiny-yolo-voc.weights'
-	caffemodel_filename = '~/caffe/tiniy-yolo-voc.caffemodel'
+	caffemodel_filename = '~/YOLOTucker/CaffeModel/tiniy-yolo-voc.caffemodel'
 			
 	print 'model file is ', model_filename
 	print 'weight file is ', yoloweight_filename
