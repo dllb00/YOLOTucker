@@ -288,7 +288,7 @@ def main():
     #parser.add_argument('cfg', type=str, help='YOLO cfg')
     #parser.add_argument('prototxt', type=str, help='Caffe prototxt')
     #args = parser.parse_args()
-    model_filename = '~/YOLOTucker/CaffeModel/tiniy-yolo-voc.prototext'
+    model_filename = '/root/YOLOTucker/CaffeModel/tiniy-yolo-voc.prototext'
     cfg_filename = '~/darknet/cfg/tiny-yolo-voc.cfg'
     convert(cfg_filename, model_filename)
 
