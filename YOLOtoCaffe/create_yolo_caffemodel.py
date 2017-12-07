@@ -37,7 +37,7 @@ def main(argv):
 	params = net.params.keys()
 
 	# read weights from file and assign to the network
-	netWeightsInt = np.fromfile(/root/darknet/tiny-yolo-voc.weights, dtype=np.int32)
+	netWeightsInt = np.fromfile(yoloweight_filename, dtype=np.int32)
 	transFlag = (netWeightsInt[0]>1000 or netWeightsInt[1]>1000) # transpose flag, the first 4 entries are major, minor, revision and net.seen
 	print transFlag
 
