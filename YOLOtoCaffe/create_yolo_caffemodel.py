@@ -10,9 +10,9 @@ import numpy as np
 import sys, getopt
 
 def main(argv):
-	model_filename = '/root/darknet/cfg/tiny-yolo-voc.cfg'
-	yoloweight_filename = '/root/darknet/tiny-yolo-voc.weights'
-	caffemodel_filename = '/root/caffe/tiniy-yolo-voc.caffemodel'
+	model_filename = '~/darknet/cfg/tiny-yolo-voc.cfg'
+	yoloweight_filename = '~/darknet/tiny-yolo-voc.weights'
+	caffemodel_filename = '~/caffe/tiniy-yolo-voc.caffemodel'
 	try:
 		opts, args = getopt.getopt(argv, "hm:w:o:")
 		print opts
