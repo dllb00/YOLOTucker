@@ -341,7 +341,7 @@ if __name__ == '__main__':
         #print('please add name field for each block to avoid generated name')
         #exit()
 
-    cfgfile = 'v1-tiny-yolo-voc.cfg'
+    cfgfile = 'tiny-yolo-voc.cfg'
     #net_info = cfg2prototxt(cfgfile)
     #print_prototxt(net_info)
     #save_prototxt(net_info, 'tmp.prototxt')
