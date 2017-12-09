@@ -3,8 +3,8 @@ sys.path.append('~/caffe/python')
 import caffe
 import numpy as np
 from collections import OrderedDict
-#from cfg import *
-#from prototxt import *
+from cfg import *
+from prototxt import *
 
 def darknet2caffe(cfgfile, weightfile, protofile, caffemodel):
     net_info = cfg2prototxt(cfgfile)
