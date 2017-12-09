@@ -332,19 +332,19 @@ def cfg2prototxt(cfgfile):
     return net_info
 
 if __name__ == '__main__':
-    import sys
-    if len(sys.argv) != 5:
-        print('try:')
-        print('python darknet2caffe.py tiny-yolo-voc.cfg tiny-yolo-voc.weights tiny-yolo-voc.prototxt tiny-yolo-voc.caffemodel')
-        print('')
-        print('please add name field for each block to avoid generated name')
-        exit()
+    #import sys
+    #if len(sys.argv) != 5:
+        #print('try:')
+        #print('python darknet2caffe.py tiny-yolo-voc.cfg tiny-yolo-voc.weights tiny-yolo-voc.prototxt tiny-yolo-voc.caffemodel')
+        #print('')
+        #print('please add name field for each block to avoid generated name')
+        #exit()
 
-    cfgfile = sys.argv[1]
+    cfgfile = 'v1-tiny-yolo-voc.cfg'
     #net_info = cfg2prototxt(cfgfile)
     #print_prototxt(net_info)
     #save_prototxt(net_info, 'tmp.prototxt')
-    weightfile = sys.argv[2]
-    protofile = sys.argv[3]
-    caffemodel = sys.argv[4]
+    weightfile = 'v1-tiny-yolo-voc.weights'
+    protofile = 'v1-tiny-yolo-voc.prototext'
+    caffemodel = 'v1-tiny-yolo-voc.caffemodel'
     darknet2caffe(cfgfile, weightfile, protofile, caffemodel)
