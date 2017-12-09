@@ -298,6 +298,7 @@ def cfg2prototxt(cfgfile):
             else:
                 fc_layer['top'] = 'layer%d-fc' % layer_id
                 fc_layer['name'] = 'layer%d-fc' % layer_id
+                
             fc_layer['type'] = 'InnerProduct'
             fc_param = OrderedDict()
             fc_param['num_output'] = int(block['output'])
