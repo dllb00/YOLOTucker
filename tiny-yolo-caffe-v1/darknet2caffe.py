@@ -345,7 +345,7 @@ if __name__ == '__main__':
     #net_info = cfg2prototxt(cfgfile)
     #print_prototxt(net_info)
     #save_prototxt(net_info, 'tmp.prototxt')
-    weightfile = 'v1-tiny-yolo-voc.weights'
-    protofile = 'v1-tiny-yolo-voc.prototext'
-    caffemodel = 'v1-tiny-yolo-voc.caffemodel'
+    weightfile = 'tiny-yolo-voc.weights'
+    protofile = 'tiny-yolo-voc.prototext'
+    caffemodel = 'tiny-yolo-voc.caffemodel'
     darknet2caffe(cfgfile, weightfile, protofile, caffemodel)
