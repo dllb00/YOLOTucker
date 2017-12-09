@@ -288,8 +288,8 @@ def main():
     #parser.add_argument('cfg', type=str, help='YOLO cfg')
     #parser.add_argument('prototxt', type=str, help='Caffe prototxt')
     #args = parser.parse_args()
-    model_filename = 'tiny-yolo-voc-v1.prototext'
-    cfg_filename = 'v1-tiny-yolo-voc.cfg'
+    model_filename = 'tiny-yolo-voc.prototext'
+    cfg_filename = 'tiny-yolo-voc.cfg'
     convert(cfg_filename, model_filename)
 
 if __name__ == "__main__":
