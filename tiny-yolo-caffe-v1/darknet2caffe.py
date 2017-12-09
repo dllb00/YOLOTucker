@@ -1,5 +1,5 @@
 import sys
-sys.path.append('/data/xiaohang/caffe/python')
+sys.path.append('~/caffe/python')
 import caffe
 import numpy as np
 from collections import OrderedDict
