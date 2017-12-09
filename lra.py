@@ -2,11 +2,11 @@ from __future__ import absolute_import
 from __future__ import division
 from __future__ import print_function
 
-proto_input = "/opt/caffe/YOLOTucker/tiniy-yolo-caffe/tiny_yolo_voc.prototxt"
-weight_input = "/opt/caffe/YOLOTucker/tiniy-yolo-caffe/tiny_yolo_voc.caffemodel"
+proto_input = "/opt/caffe/YOLOTucker/tiniy-yolo-caffe-v1/tiny_yolo_voc_v1.prototxt"
+weight_input = "/opt/caffe/YOLOTucker/tiniy-yolo-caffe-v1/tiny_yolo_voc_v1.caffemodel"
 
-proto_output = "/opt/caffe/YOLOTucker/tiniy-yolo-caffe/tiny_yolo_voc_lra.prototxt"
-weight_output = "/opt/caffe/YOLOTucker/tiniy-yolo-caffe/tiny_yolo_voc_lra.caffemodel"
+proto_output = "/opt/caffe/YOLOTucker/tiniy-yolo-caffe-v1/tiny_yolo_voc_lra_v1.prototxt"
+weight_output = "/opt/caffe/YOLOTucker/tiniy-yolo-caffe-v1/tiny_yolo_voc_lra_v1.caffemodel"
 
 from proto_lra import proto_lra
 from weight_lra import weight_lra
