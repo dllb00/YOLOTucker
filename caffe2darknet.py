@@ -334,7 +334,7 @@ def save_weights(data, weightfile):
     weights.tofile(weightfile)
 
 if __name__ == '__main__':
-    protofile = 'tiny-yolo-voc-lra.prototxt'
+    protofile = 'tiny-yolo-voc-lra.prototext'
     caffemodel = 'tiny-yolo-voc-lra.caffemodel'
     cfgfile = 'tiny-yolo-voc-lra.cfg'
     weightfile = 'tiny-yolo-voc-lra.weights'
