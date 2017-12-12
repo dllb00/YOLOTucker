@@ -1,0 +1,23 @@
+conv
+Top: conv
+Bottom: pool
+
+batchnorm
+Top: batchnorm
+Bottom: conv
+
+scale
+Top: scale
+Bottom: batchnorm
+
+relu
+Top: scale
+Bottom : scale
+
+pool
+Top: pool
+Bottom: scale
+
+
+Converter
+https://github.com/marvis/pytorch-caffe-darknet-convert
